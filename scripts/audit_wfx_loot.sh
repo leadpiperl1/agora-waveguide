@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# scripts/audit_wfx_loot.sh (v1.2.2)
-# Read-only wfx-loot IOC, Crimson Speedo Gate, and dependabot-cooldown >= 7 audit.
+# scripts/audit_wfx_loot.sh (v1.3.0)
+# Read-only wfx-loot IOC, Crimson Speedo Gate, SHA-pinning, and dependabot-cooldown >= 14 audit.
 set -euo pipefail
 
 REPO_DIR="${1:-.}"
@@ -15,17 +15,39 @@ if [[ -n "${ROGUE_HOOKS}" ]]; then
 fi
 echo "[OK] Zero .ci-*.sh or package.json lifecycle hooks."
 
-echo "=== [2/3] Dependabot Cooldown (>= 7 days) & Read-Only CI Audit ==="
+echo "=== [2/3] Dependabot Cooldown (>= 14 days), SHA Pinning & Read-Only CI Audit ==="
 if [[ ! -f ".github/dependabot.yml" ]]; then
   echo "[FAIL] Missing .github/dependabot.yml"
   exit 1
 fi
-COOLDOWN_DAYS="$(awk '/default-days:/{print $2}' .github/dependabot.yml | sort -n | head -n 1 || true)"
-if [[ -z "${COOLDOWN_DAYS}" ]] || [[ "${COOLDOWN_DAYS}" -lt 7 ]]; then
-  echo "[FAIL] dependabot cooldown must be >= 7 days (found: ${COOLDOWN_DAYS:-none})"
-  exit 1
-fi
-echo "[OK] Dependabot cooldown verified: ${COOLDOWN_DAYS} days."
+python3 - ".github/dependabot.yml" << 'PYDEP'
+import re, sys
+txt = open(sys.argv[1], encoding="utf-8").read()
+ecosystems = re.findall(r'package-ecosystem:\s*["\']?([A-Za-z0-9_-]+)', txt)
+cooldowns = [int(x) for x in re.findall(r'default-days:\s*(\d+)', txt)]
+if not ecosystems or len(cooldowns) < len(ecosystems) or any(d < 14 for d in cooldowns):
+    print(f"[FAIL] dependabot cooldown must cover all {len(ecosystems)} ecosystems with >= 14 days (found: {cooldowns})", file=sys.stderr)
+    sys.exit(1)
+print(f"[OK] Dependabot cooldown verified: {cooldowns} days across {ecosystems}.")
+PYDEP
+
+for wf in .github/workflows/*.yml .github/workflows/*.yaml; do
+  [[ -e "${wf}" ]] || continue
+  if ! grep -Eq '^permissions:[[:space:]]*$' "${wf}" || ! grep -Eq '^[[:space:]]+contents:[[:space:]]*read[[:space:]]*$' "${wf}"; then
+    echo "[FAIL] ${wf} lacks strict permissions: contents: read" >&2
+    exit 1
+  fi
+  if ! grep -Eq 'persist-credentials:[[:space:]]*false' "${wf}"; then
+    echo "[FAIL] ${wf} lacks persist-credentials: false" >&2
+    exit 1
+  fi
+  UNPINNED="$(grep -E '^[[:space:]-]*uses:[[:space:]]*' "${wf}" | grep -Ev '@[0-9a-f]{40}([[:space:]]|$|#)' || true)"
+  if [[ -n "${UNPINNED}" ]]; then
+    echo "[FAIL] Unpinned action reference in ${wf}: ${UNPINNED}" >&2
+    exit 1
+  fi
+  echo "[OK] ${wf}: contents:read + persist-credentials:false + 40-char SHA pins verified."
+done
 
 echo "=== [3/3] Git Branch & Commit History IOC Audit ==="
 if [[ -d ".git" ]]; then

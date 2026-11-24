@@ -1,7 +1,7 @@
 {
-  "title": "Agora Waveguide (v1.0.0): Two-Plane Sovereign Verification Substrate and Bottom-Up Waveguide Invariants",
+  "title": "Agora Waveguide (v1.0.1): Two-Plane Sovereign Verification Substrate and Bottom-Up Waveguide Invariants",
   "upload_type": "software",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publication_date": "2026-11-24",
   "description": "Standalone tri-substrate (ISO C99, #![no_std] Rust, and Julia) verification suite and Dun-Ga-Din repository implementing the Agora Two-Plane Contract, Bottom-Up Waveguide Invariants (P + Q = I, 64-byte L1D alignment, zero dynamic heap allocation, 12+1=13 odd-parity quorum, Fowler 5-trit/byte packing), Waystation Punch-Card wfx-loot immunity (S_runner = 0), and CODE_SHOKUNIN_UNLATCHED = 255 exit parity at --seed 42.",
   "creators": [
@@ -42,6 +42,26 @@
     },
     {
       "identifier": "10.5281/zenodo.24288018",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24509374",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24510014",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24510190",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24510196",
       "relation": "references",
       "scheme": "doi"
     },

@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use the Agora Waveguide Substrate, its C99/Rust/Julia verification harnesses, or the Agora Two-Plane specifications, please cite this release."
 type: software
 title: "Agora Waveguide: Two-Plane Sovereign Verification Substrate & Bottom-Up Waveguide Invariants"
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-11-24"
 license: "GPL-2.0-or-later"
 repository-code: "https://github.com/leadpiperl1/agora-waveguide"
@@ -29,3 +29,15 @@ references:
   - type: article
     title: "Bounded 3D Metrology and Algebraic Complexity Separation (v1.0.0)"
     doi: "10.5281/zenodo.24508791"
+  - type: article
+    title: "Triadic Falsification Contract and Unbounded Two-Ledger Deep Reductio (v1.1.0)"
+    doi: "10.5281/zenodo.24509374"
+  - type: article
+    title: "64-Trit SWAR POPCNT SUB-04 Substrate (v2.0.0)"
+    doi: "10.5281/zenodo.24510014"
+  - type: article
+    title: "Room-Temperature OAM Photonic Qudits vs TFLN Time-Bin OATC (v3.15.1)"
+    doi: "10.5281/zenodo.24510190"
+  - type: article
+    title: "Causal Walk-Forward Forecasting Invariants (v1.0.0)"
+    doi: "10.5281/zenodo.24510196"
