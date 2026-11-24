@@ -1,0 +1,72 @@
+{
+  "schema": "AGORA_WAVEGUIDE_AUDIT_MANIFEST",
+  "version": "1.0.0",
+  "generated_utc": "2026-11-24T21:40:00Z",
+  "author": "Justin D. Grimm",
+  "orcid": "0009-0000-5299-0243",
+  "affiliation": "Independent Dandelion Substrate Research Group, Gurley, Alabama 35748, USA",
+  "repository": "leadpiperl1/agora-waveguide",
+  "waystation_branch": "waystation/v1.0.0",
+  "seed": 42,
+  "all_gates_passed": true,
+  "exit_invariant": 255,
+  "bit_exact_state_crc64_ecma182": "0x5dbc15ea19317394",
+  "verified_substrates": {
+    "iso_c99": {
+      "compiler": "gcc 16.2.1 (-std=c99 -O3 -ffp-contract=off -Wall -Wextra -Wpedantic -Wshadow -Wformat=2 -Wconversion -Wundef -Werror)",
+      "warnings": 0,
+      "heap_allocations_nm_u": 0,
+      "frame_size_bytes": 64,
+      "quorum13_tie_count": 0,
+      "mz_pq_mismatch_count": 0,
+      "keyhole_clamps_byte_243": 18097,
+      "kintsugi_welds_byte_251": 2307,
+      "state_crc64_ecma182": "0x5dbc15ea19317394",
+      "gates_passed": "6/6",
+      "exit_code": 255
+    },
+    "rust_no_std": {
+      "compiler": "rustc 1.99.1 / cargo 1.99.1 (#![no_std] cdylib + rlib)",
+      "warnings": 0,
+      "unit_tests_passed": 1,
+      "frame_size_bytes": 64,
+      "quorum13_tie_count": 0,
+      "mz_pq_mismatch_count": 0,
+      "keyhole_clamps_byte_243": 18097,
+      "kintsugi_welds_byte_251": 2307,
+      "state_crc64_ecma182": "0x5dbc15ea19317394",
+      "gates_passed": "6/6",
+      "exit_code": 255
+    },
+    "julia_ffi_parity": {
+      "runtime": "julia 1.13.3 (stdlib-only Project.toml)",
+      "frame_size_bytes": 64,
+      "c99_rust_bitwise_parity": true,
+      "hot_step_alloc_bytes_c99": 0,
+      "hot_step_alloc_bytes_rust": 0,
+      "state_crc64_ecma182": "0x5dbc15ea19317394",
+      "c99_elapsed_ms": 13.953,
+      "rust_elapsed_ms": 6.295,
+      "gates_passed": "6/6",
+      "exit_code": 255
+    }
+  },
+  "hygiene_gates": {
+    "dun_ga_din_root_violations": 0,
+    "hot_routing_map_bytes": 2069,
+    "dependabot_cooldown_days": 14,
+    "runner_secrets_exposed": 0,
+    "npm_lifecycle_scripts": 0,
+    "wfx_loot_iocs": 0
+  },
+  "source_sha256": {
+    "include/agora_waveguide_v1_0_0.h": "7695417e4aa508666c13b248bc08c7d028a7d35ceb24b311ead1aaafd3d448b8",
+    "src/agora_waveguide_kernel.c": "4a6e957414e89d01624d280752eef4258c4355b4729eee5370fee7d1a244c0e2",
+    "rust/agora_waveguide_core/src/lib.rs": "3c99b4eb5a854c3aaef1915b4605cf148ec6e0452e717b8558add3a1ec6890be",
+    "rust/agora_waveguide_cli/src/main.rs": "a180ed8b0cb5bdc4b83a22069d585fde3766d29bcffeb3055f028e4282ff4af1",
+    "src/AgoraWaveguide.jl": "8a423d7adc7a0894e21fcc8fdd5087adb04ed54a71eb45304e27eda359b328bf",
+    "julia/verify_agora_waveguide.jl": "e3d61f99830234b37553014cc4d6a5c4c0c453e657613f2a24abb140eb313449",
+    "scripts/audit_skill_portability_v1_0_0.py": "c6ad60fc5fbe29e6c961bf8db4264b936bb1b91bde584be7f9ec9b99ea6804c3",
+    "scripts/audit_wfx_loot.sh": "ff6f38f3f67350e219b976f74006fb7eea14c1f66525e1d2707f4c777b4e4bd5"
+  }
+}

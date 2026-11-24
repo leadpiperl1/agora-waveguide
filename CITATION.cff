@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use the Agora Waveguide Substrate, its C99/Rust/Julia verification harnesses, or the Agora Two-Plane specifications, please cite this release."
+type: software
+title: "Agora Waveguide: Two-Plane Sovereign Verification Substrate & Bottom-Up Waveguide Invariants"
+version: "1.0.0"
+date-released: "2026-11-24"
+license: "GPL-2.0-or-later"
+repository-code: "https://github.com/leadpiperl1/agora-waveguide"
+url: "https://github.com/leadpiperl1/agora-waveguide"
+authors:
+  - family-names: "Grimm"
+    given-names: "Justin D."
+    orcid: "https://orcid.org/0009-0000-5299-0243"
+    affiliation: "Independent Dandelion Substrate Research Group, Gurley, Alabama 35748, USA"
+keywords:
+  - "agora-two-plane"
+  - "bottom-up-waveguide-invariants"
+  - "balanced-ternary"
+  - "mori-zwanzig"
+  - "iso-c99"
+  - "rust-no-std"
+  - "julia-ffi"
+  - "waystation-protocol"
+  - "dun-ga-din"
+references:
+  - type: article
+    title: "Asymmetric Liability Thresholds, Mode-Switch Oscillations, and Action-Boundary Separation in Human-AI Cognitive Control Channels (v1.1.0)"
+    doi: "10.5281/zenodo.24401748"
+  - type: article
+    title: "Bounded 3D Metrology and Algebraic Complexity Separation (v1.0.0)"
+    doi: "10.5281/zenodo.24508791"

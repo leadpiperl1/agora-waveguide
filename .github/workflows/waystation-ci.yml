@@ -1,0 +1,40 @@
+name: Agora Waveguide Waystation CI
+
+on:
+  push:
+    branches: [ "main", "waystation/**" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  waystation-tri-substrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout (Zero Persisted Credentials)
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Crimson Speedo & Dun-Ga-Din Root Hygiene Gate
+        run: |
+          set -euo pipefail
+          python3 scripts/audit_skill_portability_v1_0_0.py --seed 42 .
+          bash scripts/audit_wfx_loot.sh .
+
+      - name: Setup Julia (stdlib-only)
+        uses: julia-actions/setup-julia@4c0cb0fce8556fdb04a90347310e5db8b1f98fb9 # v2
+        with:
+          version: "1"
+
+      - name: Verify ISO C99, Rust #![no_std], and Julia FFI Parity (--seed 42, exit = 255)
+        run: |
+          set -euo pipefail
+          make clean
+          make verify

@@ -1,0 +1,17 @@
+[package]
+name = "agora_waveguide_core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Freestanding #![no_std] 64-byte C-ABI Agora Waveguide kernel (Mori-Zwanzig P+Q=I, Fowler-243, Byte 243/251/253/255)."
+
+[lib]
+name = "agora_waveguide_core"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+std = []
+
+[dependencies]

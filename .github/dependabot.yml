@@ -1,0 +1,31 @@
+# .github/dependabot.yml
+# Enforces cooldown >= 14 days (zizmor v1.32.0 clean) across Cargo and GitHub Actions.
+version: 2
+updates:
+  - package-ecosystem: "cargo"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/Chicago"
+    cooldown:
+      default-days: 14
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "rust"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "America/Chicago"
+    cooldown:
+      default-days: 14
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"

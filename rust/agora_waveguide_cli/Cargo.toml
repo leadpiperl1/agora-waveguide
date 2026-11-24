@@ -1,0 +1,14 @@
+[package]
+name = "agora_waveguide_cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Deterministic --seed 42 CLI verifier for Agora Waveguide Rust substrate (CODE_SHOKUNIN_UNLATCHED = 255)."
+
+[[bin]]
+name = "verify_agora_rust"
+path = "src/main.rs"
+
+[dependencies]
+agora_waveguide_core = { path = "../agora_waveguide_core", features = ["std"] }

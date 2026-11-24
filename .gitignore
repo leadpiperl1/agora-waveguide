@@ -1,0 +1,16 @@
+# Build outputs & cache artifacts
+/build/
+/target/
+/dist/
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

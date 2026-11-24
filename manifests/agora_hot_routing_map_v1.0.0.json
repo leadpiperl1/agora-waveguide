@@ -1,0 +1,44 @@
+{
+  "schema": "AGORA_HOT_ROUTING_MAP",
+  "version": "1.0.0",
+  "generated_utc": "2026-11-24T21:35:00Z",
+  "author": "Justin D. Grimm",
+  "orcid": "0009-0000-5299-0243",
+  "affiliation": "Independent Dandelion Substrate Research Group, Gurley, Alabama 35748, USA",
+  "repository": "leadpiperl1/agora-waveguide",
+  "waystation_branch": "waystation/v1.0.0",
+  "exit_invariant": 255,
+  "google_workspace_o1_pointers": {
+    "dandelion_os_docs_specs_folder": "1HL23PZgSUZpijwHVIpgnd1YljyfJofn2",
+    "spirit_library_core_folder": "1sSpGU9IHqPTRHdZPE0WPjqqpYirMTZRE",
+    "spirit_library_bedrock_folder": "1cNi4kUPJNMYtjF0JUESclW6AaBql1sGN",
+    "ternary_benchmarks_code_folder": "1SgSH9rUEXYRNWgOEBrleksFvMtXtK4M7",
+    "raw_outbox_folder": "1bJxyNaDq5XgsN_OLb5IRU5xWPmbSQeHE",
+    "profplum_codex_folder": "1i_ELHzVB-RreVEwY0NHxmH5symKHtFEU",
+    "master_index_v2_75_0": "1qXXFCgpGUFlsNA9MXhDKuIM_PAMDE7O8HXdgFNBuAwo",
+    "pin_in_the_map_v1_54_0": "1LlfoJTDjpwDk4zhSgSLU6htncwchCXdfPfm8wLYUFDc",
+    "pearl_agora_two_plane_v1_0_0": "1ClJtFOpws1xLJA5WeNKzzNTDpvsiJM_F94WsRt22es8",
+    "pearl_bottom_up_waveguide_v1_0_0": "1jBzs3FfXlRsSgkieJ_LW2vOHkM_o5psERcygXsPyPXU",
+    "pearl_nov24_closure_v1_0_0": "1hjelWkPWsrhamsUkc7DN80jAnnho0Wpn4-ECbtfq96g",
+    "pearl_waystation_punchcard_v1_2_0": "1amq0S49azXqVkZ0VCEmFHhUW9gvA0GOF4Wvy5mc8yu4"
+  },
+  "local_workstation_anchors": {
+    "host_profile": "profplum (Fedora Linux, PREEMPT_RT, 18.50 W Hobo Rig Cap)",
+    "desktop_release_reference": "Dandelion_Release_v4.1.1 (dandelion_sovereign_v4.1.1 / omnibus_v4.1.1)",
+    "desktop_grimm_repo_reference": "grimm-repo (21st-Century Grimm's Law v3.0.0)",
+    "desktop_ergospheric_reference": "dandelion_ergospheric_healthcheck_v3_5_0.zip"
+  },
+  "zenodo_commons_anchors": [
+    "10.5281/zenodo.24401748",
+    "10.5281/zenodo.24508791",
+    "10.5281/zenodo.24510228"
+  ],
+  "tri_substrate_contract": {
+    "frame_bytes": 64,
+    "seed": 42,
+    "c99_heap_allocations": 0,
+    "rust_no_std_core": true,
+    "julia_hot_step_alloc_bytes": 0,
+    "code_shokunin_unlatched": 255
+  }
+}

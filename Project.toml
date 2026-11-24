@@ -1,0 +1,11 @@
+name = "AgoraWaveguide"
+uuid = "7a3e91b4-8c2d-4f6e-a103-42255d4a6e01"
+authors = ["Justin D. Grimm <leadpiperl1@gmail.com>"]
+version = "1.0.0"
+
+[deps]
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+julia = "1.10"

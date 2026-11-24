@@ -1,0 +1,20 @@
+[workspace]
+members = [
+  "rust/agora_waveguide_core",
+  "rust/agora_waveguide_cli",
+]
+resolver = "2"
+
+[workspace.package]
+version = "1.0.0"
+edition = "2021"
+authors = ["Justin D. Grimm <leadpiperl1@gmail.com>"]
+license = "GPL-2.0-or-later OR MIT"
+repository = "https://github.com/leadpiperl1/agora-waveguide"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
