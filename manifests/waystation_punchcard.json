@@ -4,7 +4,7 @@
   "repository": "leadpiperl1/agora-waveguide",
   "waystation_branch": "waystation/v1.0.1",
   "version": "v1.0.1",
-  "timestamp_utc": "2026-11-24T22:42:19Z",
+  "timestamp_utc": "2026-11-24T22:51:00Z",
   "pre_stamp_git_tree_hash": "81ab27a7596f45ea59919a33d33271bdb6d54381",
   "runner_secrets_exposed": 0,
   "npm_lifecycle_scripts": 0,
@@ -12,7 +12,7 @@
   "seed": 42,
   "state_crc64_ecma182": "0x5dbc15ea19317394",
   "ssh_signed": true,
-  "human_approved": false,
-  "status": "STAGED_AT_WAYSTATION",
+  "human_approved": true,
+  "status": "PUNCHED_AND_CLEARED",
   "exit_invariant": 255
 }
